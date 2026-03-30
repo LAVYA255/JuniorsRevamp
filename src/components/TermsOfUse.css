@@ -1,0 +1,249 @@
+.tou-page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top bar */
+.tou-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tou-topbar-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0.875rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tou-close {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.15s;
+}
+
+.tou-close:hover {
+  color: var(--text-primary);
+}
+
+/* Body */
+.tou-body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 2rem 5rem;
+  width: 100%;
+}
+
+/* Hero */
+.tou-hero {
+  margin-bottom: 2.5rem;
+}
+
+.tou-hero .badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.28rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.tou-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: 0.875rem;
+}
+
+.tou-meta {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.tou-intro {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* Contact card */
+.tou-contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.tou-contact-card--light {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+.tou-contact-row {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  align-items: baseline;
+}
+
+.tou-contact-label {
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  min-width: 72px;
+  flex-shrink: 0;
+}
+
+.tou-contact-card a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: 0.85;
+}
+
+.tou-contact-card a:hover {
+  opacity: 1;
+}
+
+.tou-contact-card--light a {
+  color: var(--text-primary);
+}
+
+/* Sections */
+.tou-section {
+  margin-bottom: 2.75rem;
+  padding-bottom: 2.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tou-section:last-of-type {
+  border-bottom: none;
+}
+
+.tou-section-title {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+
+.tou-section p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 0.875rem;
+}
+
+.tou-section p:last-child {
+  margin-bottom: 0;
+}
+
+.tou-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tou-section ul li {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.tou-section ul li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.tou-section a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tou-section strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Footer */
+.tou-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tou-footer p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.tou-back-btn {
+  padding: 0.65rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tou-body {
+    padding: 2.5rem 1.25rem 4rem;
+  }
+
+  .tou-contact-row {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .tou-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,118 @@
+.comparison-section {
+  padding: 8rem 0;
+  background-color: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.comparison-section::before {
+  content: '';
+  position: absolute;
+  width: 70vw;
+  height: 70vw;
+  max-width: 800px;
+  max-height: 800px;
+  background: radial-gradient(circle, rgba(0,0,0,0.02) 0%, rgba(255,255,255,0) 70%);
+  top: 0;
+  left: 10%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: float-glow 20s ease-in-out infinite alternate;
+}
+
+.comparison-section::after {
+  content: '';
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  background: radial-gradient(circle, rgba(0,0,0,0.015) 0%, rgba(255,255,255,0) 70%);
+  bottom: -10%;
+  right: 5%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: float-glow 25s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes float-glow {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(50px, -30px) scale(1.05); }
+  100% { transform: translate(-30px, 50px) scale(0.95); }
+}
+
+.comparison-header {
+  margin-bottom: 5rem;
+}
+
+.table-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.comparison-table th {
+  padding: 2rem 1.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-table td {
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.juniors-col {
+  color: var(--accent) !important;
+  font-weight: 600;
+  width: 33%;
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+.legacy-col {
+  width: 33%;
+}
+
+.feature-col {
+  font-weight: 500;
+  color: var(--text-primary) !important;
+  width: 34%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (max-width: 768px) {
+  .comparison-table th, .comparison-table td {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
