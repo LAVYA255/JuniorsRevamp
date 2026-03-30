@@ -332,7 +332,7 @@ const TermsOfUse = () => {
           </Section>
 
           <div className="tou-footer">
-            <p>© 2025 Highfox Private Limited. All rights reserved.</p>
+            <p>© 2026 Highfox Private Limited. All rights reserved.</p>
             <button className="btn-primary tou-back-btn" onClick={onClose}>Back to site</button>
           </div>
         </div>
