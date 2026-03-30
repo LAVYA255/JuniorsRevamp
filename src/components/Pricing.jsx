@@ -11,7 +11,7 @@ const Pricing = () => {
             className="pricing-header"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.6 }}
           >
             <span className="badge">Pricing</span>
@@ -22,7 +22,7 @@ const Pricing = () => {
             className="pricing-details"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <motion.div 

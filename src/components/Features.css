@@ -67,7 +67,21 @@
 }
 
 @media (max-width: 768px) {
+  .features-section {
+    padding: 4rem 0;
+  }
+
+  .features-header {
+    margin-bottom: 2.5rem;
+  }
+
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-card {
+    padding: 2rem 1.5rem;
+    min-height: unset;
   }
 }

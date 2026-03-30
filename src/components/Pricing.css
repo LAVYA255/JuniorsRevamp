@@ -47,7 +47,15 @@
 }
 
 @media (max-width: 768px) {
+  .pricing-section {
+    padding: 4rem 0;
+  }
+
   .pricing-card {
-    padding: 2.5rem 1.5rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .pricing-statement {
+    font-size: 1.25rem;
   }
 }

@@ -14,8 +14,11 @@ const lines = Array.from({ length: 45 }).map((_, i) => {
 const Hero = () => {
   const navigate = useNavigate();
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 1000], [0, 150]);
-  const opacity = useTransform(scrollY, [0, 150, 600], [1, 1, 0]);
+
+  // Disable parallax/fade on mobile — keeps content visible on fast scroll
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const y = useTransform(scrollY, [0, 1000], isMobile ? [0, 0] : [0, 150]);
+  const opacity = useTransform(scrollY, [0, 150, 600], isMobile ? [1, 1, 1] : [1, 1, 0]);
 
   return (
     <section className="hero-section">

@@ -111,8 +111,24 @@
 }
 
 @media (max-width: 768px) {
-  .comparison-table th, .comparison-table td {
-    padding: 1rem;
-    font-size: 0.95rem;
+  .comparison-section {
+    padding: 4rem 0;
+  }
+
+  /* Make table horizontally scrollable so it never overflows */
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.875rem 1rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .comparison-header {
+    margin-bottom: 2.5rem;
   }
 }

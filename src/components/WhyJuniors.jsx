@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Shield, Coins, Bot } from 'lucide-react';
 import './WhyJuniors.css';
 
@@ -28,14 +28,17 @@ const reasons = [
 ];
 
 const WhyJuniors = () => {
+  // On mobile the cards stack — raised offset looks broken, so disable it
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
+
   return (
     <section id="why" className="section why-section">
       <div className="container">
-        <motion.div 
+        <motion.div
           className="why-header text-center"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-20px" }}
+          viewport={{ once: true, amount: 0 }}
           transition={{ duration: 0.4 }}
         >
           <span className="badge">Why Juniors</span>
@@ -45,15 +48,16 @@ const WhyJuniors = () => {
         <div className="why-cards">
           {reasons.map((reason, index) => {
             const isMiddle = index === 1;
+            const finalY = (!isMobile && isMiddle) ? -20 : 0;
             return (
-              <motion.div 
+              <motion.div
                 key={index}
                 className={`why-card ${isMiddle ? 'card-raised' : ''}`}
-                initial={{ opacity: 0, y: 50 + (index * 20) }}
-                whileInView={{ opacity: 1, y: isMiddle ? -20 : 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.7, delay: index * 0.15 }}
-                whileHover={{ y: isMiddle ? -25 : -5 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: finalY }}
+                viewport={{ once: true, amount: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: finalY - 5 }}
               >
                 <div className="card-top">
                   <div className="card-number">0{index + 1}</div>

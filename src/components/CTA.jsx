@@ -20,7 +20,7 @@ const CTA = () => {
           className="cta-content text-center"
           initial={{ opacity: 0, scale: 0.95, y: 30 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           whileHover={{ scale: 1.02 }}
         >

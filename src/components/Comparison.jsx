@@ -35,7 +35,7 @@ const Comparison = () => {
           className="comparison-header text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0 }}
           transition={{ duration: 0.6 }}
         >
           <span className="badge">Comparison</span>
@@ -46,7 +46,7 @@ const Comparison = () => {
           className="table-wrapper"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <table className="comparison-table">
@@ -61,7 +61,7 @@ const Comparison = () => {
               variants={container}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, amount: 0 }}
             >
               {rows.map((row, index) => (
                 <motion.tr 
