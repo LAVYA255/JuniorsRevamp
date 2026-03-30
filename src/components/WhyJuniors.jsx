@@ -35,8 +35,8 @@ const WhyJuniors = () => {
           className="why-header text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-20px" }}
+          transition={{ duration: 0.4 }}
         >
           <span className="badge">Why Juniors</span>
           <h2 className="text-h2 why-title">Built for teams who refuse to compromise.</h2>

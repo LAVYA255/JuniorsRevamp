@@ -14,8 +14,8 @@ const lines = Array.from({ length: 45 }).map((_, i) => {
 const Hero = () => {
   const navigate = useNavigate();
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 150]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  const y = useTransform(scrollY, [0, 1000], [0, 150]);
+  const opacity = useTransform(scrollY, [0, 150, 600], [1, 1, 0]);
 
   return (
     <section className="hero-section">
@@ -85,10 +85,35 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <motion.button className="btn-primary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => navigate('/early-access')}>
-            Get early access
+            Get Access
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </motion.button>
-          
+        </motion.div>
+
+        <motion.div 
+          className="hero-logos-banner"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <div className="logos-scroll-track">
+            <div className="logos-group">
+              <img src="/companylogos/bmw.webp" alt="BMW" />
+              <img src="/companylogos/ktm.webp" alt="KTM" />
+              <img src="/companylogos/luxmi.webp" alt="Luxmi" />
+              <img src="/companylogos/orange-sugar.webp" alt="Orange Sugar" />
+              <img src="/companylogos/prasam.webp" alt="Prasam" />
+              <img src="/companylogos/tuco-kids.webp" alt="Tuco Kids" />
+            </div>
+            <div className="logos-group">
+              <img src="/companylogos/bmw.webp" alt="BMW" />
+              <img src="/companylogos/ktm.webp" alt="KTM" />
+              <img src="/companylogos/luxmi.webp" alt="Luxmi" />
+              <img src="/companylogos/orange-sugar.webp" alt="Orange Sugar" />
+              <img src="/companylogos/prasam.webp" alt="Prasam" />
+              <img src="/companylogos/tuco-kids.webp" alt="Tuco Kids" />
+            </div>
+          </div>
         </motion.div>
       </motion.div>
     </section>

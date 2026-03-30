@@ -159,6 +159,19 @@
   margin-top: 0.1rem;
 }
 
+/* API error banner */
+.ea-api-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  color: #c53030;
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 1rem;
+  font-size: 0.875rem;
+}
+
 /* Submit */
 .ea-submit {
   margin-top: 0.5rem;
@@ -170,6 +183,27 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  transition: opacity 0.15s;
+}
+
+.ea-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.ea-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: ea-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes ea-spin {
+  to { transform: rotate(360deg); }
 }
 
 /* Success */

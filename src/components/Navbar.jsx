@@ -27,7 +27,7 @@ const Navbar = () => {
 
         <div className="navbar-cta">
           <button className="btn-primary" onClick={() => navigate('/early-access')}>
-            Get Early Access
+            Get Access
           </button>
         </div>
       </div>

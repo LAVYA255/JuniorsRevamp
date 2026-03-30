@@ -27,7 +27,7 @@ const Footer = () => {
                 <li><a href="#features">Features</a></li>
                 <li>
                   <button className="footer-ea-link" onClick={() => navigate('/early-access')}>
-                    Get Early Access
+                    Get Access
                   </button>
                 </li>
               </ul>

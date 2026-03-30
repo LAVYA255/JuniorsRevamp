@@ -8,11 +8,12 @@ const EarlyAccessPage = () => {
   const [form, setForm] = useState({
     name: '',
     email: '',
-    company: '',
-    role: '',
+    subject: '',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [apiError, setApiError] = useState('');
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const EarlyAccessPage = () => {
     if (!form.name.trim()) e.name = 'Name is required';
     if (!form.email.trim()) e.email = 'Email is required';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = 'Enter a valid email';
-    if (!form.company.trim()) e.company = 'Company is required';
+    if (!form.subject.trim()) e.subject = 'Subject is required';
     return e;
   };
 
@@ -32,17 +33,43 @@ const EarlyAccessPage = () => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: '' }));
+    if (apiError) setApiError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
-    console.log('Early access request:', form);
-    setSubmitted(true);
+
+    setLoading(true);
+    setApiError('');
+
+    try {
+      const res = await fetch('https://holavoicemail.com/api/support-request', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message,
+          platform: 'JUNIORS',
+        }),
+      });
+
+      if (!res.ok) throw new Error('Something went wrong. Please try again.');
+
+      setSubmitted(true);
+    } catch (err) {
+      setApiError(err.message || 'Failed to submit. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -100,7 +127,7 @@ const EarlyAccessPage = () => {
               >
                 <div className="ea-header">
                   <span className="badge">Limited early access</span>
-                  <h1 className="ea-title">Get Early Access</h1>
+                  <h1 className="ea-title">Get Access</h1>
                   <p className="ea-subtitle">
                     Tell us a bit about yourself and your team. We'll reach out to get you set up.
                   </p>
@@ -137,36 +164,21 @@ const EarlyAccessPage = () => {
                     </div>
                   </div>
 
-                  <div className="ea-row">
-                    <div className={`ea-field${errors.company ? ' ea-field--error' : ''}`}>
-                      <label htmlFor="ea-company">Company <span>*</span></label>
-                      <input
-                        id="ea-company"
-                        name="company"
-                        type="text"
-                        placeholder="Acme Inc."
-                        value={form.company}
-                        onChange={handleChange}
-                        autoComplete="organization"
-                      />
-                      {errors.company && <span className="ea-error">{errors.company}</span>}
-                    </div>
-
-                    <div className="ea-field">
-                      <label htmlFor="ea-role">Your role</label>
-                      <input
-                        id="ea-role"
-                        name="role"
-                        type="text"
-                        placeholder="Head of Support"
-                        value={form.role}
-                        onChange={handleChange}
-                      />
-                    </div>
+                  <div className={`ea-field${errors.subject ? ' ea-field--error' : ''}`}>
+                    <label htmlFor="ea-subject">Subject <span>*</span></label>
+                    <input
+                      id="ea-subject"
+                      name="subject"
+                      type="text"
+                      placeholder="e.g. Setting up AI support for my team"
+                      value={form.subject}
+                      onChange={handleChange}
+                    />
+                    {errors.subject && <span className="ea-error">{errors.subject}</span>}
                   </div>
 
                   <div className="ea-field">
-                    <label htmlFor="ea-message">What are you hoping to solve?</label>
+                    <label htmlFor="ea-message">Message</label>
                     <textarea
                       id="ea-message"
                       name="message"
@@ -177,11 +189,29 @@ const EarlyAccessPage = () => {
                     />
                   </div>
 
-                  <button type="submit" className="btn-primary ea-submit">
-                    Submit request
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
+                  {apiError && (
+                    <div className="ea-api-error">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                      </svg>
+                      {apiError}
+                    </div>
+                  )}
+
+                  <button type="submit" className="btn-primary ea-submit" disabled={loading}>
+                    {loading ? (
+                      <>
+                        <span className="ea-spinner" />
+                        Submitting…
+                      </>
+                    ) : (
+                      <>
+                        Submit request
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                      </>
+                    )}
                   </button>
                 </form>
               </motion.div>
