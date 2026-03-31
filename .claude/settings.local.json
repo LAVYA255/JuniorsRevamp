@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "mcp__Claude_Preview__preview_start",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(node -e \"const fs=require\\(''fs''\\); const t=Date.now\\(\\); fs.utimesSync\\(''src/components/Navbar.css'', t/1000, t/1000\\); console.log\\(''touched''\\);\")"
     ]
   }
 }

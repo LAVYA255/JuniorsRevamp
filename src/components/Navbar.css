@@ -47,13 +47,126 @@
   color: var(--text-primary);
 }
 
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .navbar-cta .btn-primary {
   padding: 0.6rem 1.25rem;
   font-size: 0.95rem;
 }
 
+/* ── Hamburger ───────────────────────────────── */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.navbar-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.navbar-hamburger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar-hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.navbar-hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile menu ─────────────────────────────── */
+.mobile-menu-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 98;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--nav-height);
+  left: 1rem;
+  right: 1rem;
+  z-index: 99;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  padding: 1.5rem;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 1.25rem;
+}
+
+.mobile-menu-links li a {
+  display: block;
+  padding: 0.875rem 0.25rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  transition: color 0.15s;
+}
+
+.mobile-menu-links li:last-child a {
+  border-bottom: none;
+}
+
+.mobile-menu-links li a:hover {
+  color: var(--text-secondary);
+}
+
+.mobile-menu-cta {
+  width: 100%;
+  padding: 0.875rem;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+/* ── Responsive ──────────────────────────────── */
 @media (max-width: 900px) {
   .navbar-links {
     display: none;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  .mobile-menu-backdrop,
+  .mobile-menu {
+    display: block;
+  }
+
+  .navbar-container {
+    padding: 0 1.25rem;
   }
 }

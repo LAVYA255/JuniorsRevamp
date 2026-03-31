@@ -98,11 +98,6 @@
   gap: 1.25rem;
 }
 
-.ea-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-}
 
 .ea-field {
   display: flex;
