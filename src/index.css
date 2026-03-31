@@ -178,9 +178,9 @@ ul {
 }
 
 /* ── Mobile globals ─────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   :root {
-    --nav-height: 72px;
+    --nav-height: 68px;
   }
 
   .container {

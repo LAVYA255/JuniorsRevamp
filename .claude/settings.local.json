@@ -3,7 +3,9 @@
     "allow": [
       "mcp__Claude_Preview__preview_start",
       "Bash(npm run:*)",
-      "Bash(node -e \"const fs=require\\(''fs''\\); const t=Date.now\\(\\); fs.utimesSync\\(''src/components/Navbar.css'', t/1000, t/1000\\); console.log\\(''touched''\\);\")"
+      "Bash(node -e \"const fs=require\\(''fs''\\); const t=Date.now\\(\\); fs.utimesSync\\(''src/components/Navbar.css'', t/1000, t/1000\\); console.log\\(''touched''\\);\")",
+      "Bash(node -e \"const fs=require\\(''fs''\\),t=Date.now\\(\\)/1000;fs.utimesSync\\(''src/components/Navbar.css'',t,t\\);fs.utimesSync\\(''src/index.css'',t,t\\);console.log\\(''touched''\\);\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5174)"
     ]
   }
 }

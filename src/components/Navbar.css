@@ -9,6 +9,14 @@
   -webkit-backdrop-filter: blur(12px);
   z-index: 100;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  /* No JS transform — pure CSS so position:fixed never jitters on mobile */
+  transform: none !important;
+  animation: navbar-fadein 0.4s ease both;
+}
+
+@keyframes navbar-fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 .navbar-container {
@@ -167,6 +175,15 @@
   }
 
   .navbar-container {
-    padding: 0 1.25rem;
+    padding: 0 1.5rem;
+  }
+
+  .navbar-logo img {
+    height: 52px !important;
+  }
+
+  .navbar-cta .btn-primary {
+    padding: 0.55rem 1rem;
+    font-size: 0.875rem;
   }
 }

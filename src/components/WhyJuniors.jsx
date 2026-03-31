@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Coins, Bot } from 'lucide-react';
+import { fadeUp } from '../utils/motion';
 import './WhyJuniors.css';
 
 const reasons = [
@@ -27,55 +28,44 @@ const reasons = [
   }
 ];
 
-const WhyJuniors = () => {
-  // On mobile the cards stack — raised offset looks broken, so disable it
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
+const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
 
-  return (
-    <section id="why" className="section why-section">
-      <div className="container">
-        <motion.div
-          className="why-header text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0 }}
-          transition={{ duration: 0.4 }}
-        >
-          <span className="badge">Why Juniors</span>
-          <h2 className="text-h2 why-title">Built for teams who refuse to compromise.</h2>
-        </motion.div>
+const WhyJuniors = () => (
+  <section id="why" className="section why-section">
+    <div className="container">
+      <motion.div className="why-header text-center" {...fadeUp()}>
+        <span className="badge">Why Juniors</span>
+        <h2 className="text-h2 why-title">Built for teams who refuse to compromise.</h2>
+      </motion.div>
 
-        <div className="why-cards">
-          {reasons.map((reason, index) => {
-            const isMiddle = index === 1;
-            const finalY = (!isMobile && isMiddle) ? -20 : 0;
-            return (
-              <motion.div
-                key={index}
-                className={`why-card ${isMiddle ? 'card-raised' : ''}`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: finalY }}
-                viewport={{ once: true, amount: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: finalY - 5 }}
-              >
-                <div className="card-top">
-                  <div className="card-number">0{index + 1}</div>
-                  <reason.icon className="card-icon" size={24} />
-                </div>
-                <h3 className="card-title">
-                  {reason.title}
-                  <span className="card-subtitle">{reason.subtitle}</span>
-                </h3>
-                <p className="card-body text-body-lg">{reason.body}</p>
-                <div className="card-tag">{reason.tag}</div>
-              </motion.div>
-            )
-          })}
-        </div>
+      <div className="why-cards">
+        {reasons.map((reason, index) => {
+          const isMiddle = index === 1;
+          const finalY = (!isMobile && isMiddle) ? -20 : 0;
+          return (
+            <motion.div
+              key={index}
+              className={`why-card ${isMiddle ? 'card-raised' : ''}`}
+              {...fadeUp(index * 0.08)}
+              whileInView={{ opacity: 1, y: finalY }}
+              whileHover={{ y: finalY - 5 }}
+            >
+              <div className="card-top">
+                <div className="card-number">0{index + 1}</div>
+                <reason.icon className="card-icon" size={24} />
+              </div>
+              <h3 className="card-title">
+                {reason.title}
+                <span className="card-subtitle">{reason.subtitle}</span>
+              </h3>
+              <p className="card-body text-body-lg">{reason.body}</p>
+              <div className="card-tag">{reason.tag}</div>
+            </motion.div>
+          );
+        })}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default WhyJuniors;

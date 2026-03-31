@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -21,12 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      <motion.nav
-        className="navbar"
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      >
+      <nav className="navbar">
         <div className="navbar-container">
           <div className="navbar-logo">
             <img src="/logo.png" alt="Juniors Logo" style={{ height: '72px' }} />
@@ -59,7 +54,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Mobile menu */}
       <AnimatePresence>
