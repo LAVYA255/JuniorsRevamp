@@ -28,8 +28,6 @@ const reasons = [
   }
 ];
 
-const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
-
 const WhyJuniors = () => (
   <section id="why" className="section why-section">
     <div className="container">
@@ -39,16 +37,12 @@ const WhyJuniors = () => (
       </motion.div>
 
       <div className="why-cards">
-        {reasons.map((reason, index) => {
-          const isMiddle = index === 1;
-          const finalY = (!isMobile && isMiddle) ? -20 : 0;
-          return (
+        {reasons.map((reason, index) => (
             <motion.div
               key={index}
-              className={`why-card ${isMiddle ? 'card-raised' : ''}`}
+              className="why-card"
               {...fadeUp(index * 0.08)}
-              whileInView={{ opacity: 1, y: finalY }}
-              whileHover={{ y: finalY - 5 }}
+              whileHover={{ y: -5 }}
             >
               <div className="card-top">
                 <div className="card-number">0{index + 1}</div>
@@ -61,8 +55,7 @@ const WhyJuniors = () => (
               <p className="card-body text-body-lg">{reason.body}</p>
               <div className="card-tag">{reason.tag}</div>
             </motion.div>
-          );
-        })}
+        ))}
       </div>
     </div>
   </section>

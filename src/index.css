@@ -15,7 +15,7 @@
   --border-dark: #27272a;
   --bg-dark-card: #18181b;
 
-  --nav-height: 100px;
+  --nav-height: 76px;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -67,7 +67,7 @@ ul {
 
 /* Sections */
 .section {
-  padding: 6rem 0;
+  padding: 5rem 0;
 }
 
 .section-dark {
@@ -78,27 +78,27 @@ ul {
 /* Typography Utilities */
 .text-center { text-align: center; }
 .text-hero {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.03em;
 }
 
 .text-h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(1.75rem, 2.8vw, 2.5rem);
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.02em;
 }
 
 .text-h3 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
   font-weight: 500;
   line-height: 1.2;
 }
 
 .text-body-lg {
-  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 1.25vw, 1.1rem);
   color: var(--text-secondary);
 }
 
@@ -184,7 +184,7 @@ ul {
   }
 
   .container {
-    padding: 0 1.25rem;
+    padding: 0 1.75rem;
   }
 
   .section {
@@ -192,11 +192,11 @@ ul {
   }
 
   .text-hero {
-    font-size: clamp(2rem, 8vw, 3rem);
+    font-size: clamp(1.25rem, 5.2vw, 2rem);
   }
 
   .text-h2 {
-    font-size: clamp(1.75rem, 7vw, 2.5rem);
+    font-size: clamp(1.35rem, 5.5vw, 2rem);
   }
 
   .btn-primary,

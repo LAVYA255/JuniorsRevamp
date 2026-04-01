@@ -39,14 +39,14 @@ const EarlyAccessPage = () => {
     setApiError('');
 
     try {
-      const res = await fetch('https://holavoicemail.com/api/support-request', {
+      const res = await fetch('/api/support-request', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: form.name,
           email: form.email,
-          subject: '',
-          message: '',
+          subject: 'Early Access Request',
+          message: 'Early access request submitted via juniorsai.com',
           platform: 'JUNIORS',
         }),
       });
