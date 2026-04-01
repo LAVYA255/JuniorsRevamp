@@ -114,7 +114,6 @@ const EarlyAccessPage = () => {
                 transition={{ duration: 0.2 }}
               >
                 <div className="ea-header">
-                  <span className="badge">Limited Access</span>
                   <h1 className="ea-title">Get Access</h1>
                   <p className="ea-subtitle">
                     Tell us a bit about yourself. We'll reach out to get you set up.
