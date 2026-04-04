@@ -156,7 +156,7 @@ const EarlyAccessPage = () => {
                     <textarea
                       id="ea-message"
                       name="message"
-                      placeholder="Anything you'd like us to know — your use case, team size, or questions."
+                      placeholder="Anything you'd like us to know, your use case, team size, or questions."
                       value={form.message}
                       onChange={handleChange}
                       rows={3}

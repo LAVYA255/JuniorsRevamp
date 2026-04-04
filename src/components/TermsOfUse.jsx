@@ -46,7 +46,7 @@ const TermsOfUse = () => {
             <span className="badge">Legal</span>
             <h1 className="tou-title">Terms of Use</h1>
             <p className="tou-meta">
-              Juniors AI &mdash; a product of <strong>Herpenza Private Limited</strong><br />
+              Juniors AI , a product of <strong>Herpenza Private Limited</strong><br />
               Last updated: <strong>July 25, 2025</strong>
             </p>
             <p className="tou-intro">
@@ -89,7 +89,7 @@ const TermsOfUse = () => {
             <ul>
               <li><strong>AI-First Resolution:</strong> RAG-powered answers sourced from your knowledge base, with configurable primary and backup LLMs. Confidence-based escalation automatically routes unresolved queries to human agents.</li>
               <li><strong>Agent Console:</strong> Real-time customer chat, internal notes, saved replies with slash commands, conversation parking and resumption, and Slack-based blocked-department alerts for human support agents.</li>
-              <li><strong>Role-Based Access Control (RBAC):</strong> Granular permission tiers — Agents, Supervisors, and Admins — ensuring data and queue visibility is scoped strictly to each role.</li>
+              <li><strong>Role-Based Access Control (RBAC):</strong> Granular permission tiers,Agents, Supervisors, and Admins,ensuring data and queue visibility is scoped strictly to each role.</li>
               <li><strong>Analytics &amp; Reporting:</strong> Individual performance dashboards, team-level views, and organisation-wide reporting covering AI resolution rates, conversation trends, SLA compliance, and configurable time-period filters.</li>
               <li><strong>SLA Management:</strong> Configurable first-response, resolution, and escalation targets per priority level, with automated breach alerts to prevent SLA violations.</li>
               <li><strong>Custom Integrations:</strong> Secure connectivity to your existing backend systems and third-party tools via custom webhooks, REST API access, and deep internal API hooks.</li>
@@ -101,7 +101,7 @@ const TermsOfUse = () => {
           <Section id="tou-3" title="3. Bring-Your-Own-Infrastructure (BYOI) Model">
             <p>Juniors operates on a strict BYOI model. This means:</p>
             <ul>
-              <li><strong>Your Infrastructure:</strong> You connect Juniors to infrastructure you own or license — including databases, object storage, and LLM API credentials. Juniors orchestrates these; it does not host them.</li>
+              <li><strong>Your Infrastructure:</strong> You connect Juniors to infrastructure you own or license,including databases, object storage, and LLM API credentials. Juniors orchestrates these; it does not host them.</li>
               <li><strong>Zero Data Residency on Our Side:</strong> Customer conversation data, support tickets, agent activity, and knowledge base content reside entirely within the infrastructure you designate. Juniors stores no customer or end-user data on its own servers.</li>
               <li><strong>LLM Selection:</strong> You select, configure, and pay directly for the large language model (LLM) provider of your choice. Juniors applies no markup to LLM token costs. Your AI billing remains exclusively between you and your chosen provider.</li>
               <li><strong>Configuration Responsibility:</strong> You are solely responsible for the correct and secure configuration of the infrastructure you connect to Juniors, including access credentials, permissions, and data retention settings.</li>

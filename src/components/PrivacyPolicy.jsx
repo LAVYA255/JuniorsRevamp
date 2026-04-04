@@ -46,11 +46,11 @@ const PrivacyPolicy = () => {
             <span className="badge">Legal</span>
             <h1 className="pp-title">Privacy Policy</h1>
             <p className="pp-meta">
-              Juniors AI &mdash; a product of <strong>Herpenza Private Limited</strong><br />
+              Juniors AI , a product of <strong>Herpenza Private Limited</strong><br />
               Last updated: <strong>July 25, 2025</strong>
             </p>
             <p className="pp-intro">
-              This Privacy Policy explains how Herpenza Private Limited, operating as Juniors AI ("<strong>Juniors</strong>", "<strong>we</strong>", "<strong>us</strong>", or "<strong>our</strong>"), handles information in connection with the Juniors platform. Given our <strong>bring-your-own-infrastructure (BYOI)</strong> architecture, the scope of data we collect and process is intentionally minimal — your customer data stays on your infrastructure, not ours. This policy applies to account holders, team members, and visitors to our website.
+              This Privacy Policy explains how Herpenza Private Limited, operating as Juniors AI ("<strong>Juniors</strong>", "<strong>we</strong>", "<strong>us</strong>", or "<strong>our</strong>"), handles information in connection with the Juniors platform. Given our <strong>bring-your-own-infrastructure (BYOI)</strong> architecture, the scope of data we collect and process is intentionally minimal,your customer data stays on your infrastructure, not ours. This policy applies to account holders, team members, and visitors to our website.
             </p>
           </div>
 
@@ -77,9 +77,9 @@ const PrivacyPolicy = () => {
           <Section id="pp-1" title="1. The BYOI Principle and What It Means for Your Privacy">
             <p>Juniors is built on a zero-data-residency model. This is the single most important fact about how we handle data:</p>
             <ul>
-              <li><strong>Customer conversation data</strong> — support tickets, chat histories, agent notes, and end-user messages — is stored exclusively in the infrastructure <em>you</em> provide and control. It never passes through or resides on Juniors' servers.</li>
-              <li><strong>Your knowledge base</strong> — documents, FAQs, and other content you index for RAG-powered AI resolution — is processed in your designated infrastructure. Juniors does not retain copies of this content.</li>
-              <li><strong>LLM inference</strong> — all AI requests are routed directly to your chosen LLM provider using credentials you supply. Juniors does not intercept, log, or store these requests or responses on our side.</li>
+              <li><strong>Customer conversation data</strong>,support tickets, chat histories, agent notes, and end-user messages,is stored exclusively in the infrastructure <em>you</em> provide and control. It never passes through or resides on Juniors' servers.</li>
+              <li><strong>Your knowledge base</strong>,documents, FAQs, and other content you index for RAG-powered AI resolution,is processed in your designated infrastructure. Juniors does not retain copies of this content.</li>
+              <li><strong>LLM inference</strong>,all AI requests are routed directly to your chosen LLM provider using credentials you supply. Juniors does not intercept, log, or store these requests or responses on our side.</li>
             </ul>
             <p>This architecture means the bulk of operational data in your support platform is governed by your own privacy obligations, not ours. This policy covers the narrower category of data Juniors does handle directly.</p>
           </Section>
@@ -143,7 +143,7 @@ const PrivacyPolicy = () => {
             <p>Where applicable (including under GDPR for users in the European Economic Area), we process personal data on the following legal bases:</p>
             <ul>
               <li><strong>Contract performance:</strong> Processing necessary to provide the Juniors platform under your subscription agreement.</li>
-              <li><strong>Legitimate interests:</strong> Security monitoring, product analytics, and fraud prevention — where these interests are not overridden by your rights.</li>
+              <li><strong>Legitimate interests:</strong> Security monitoring, product analytics, and fraud prevention,where these interests are not overridden by your rights.</li>
               <li><strong>Legal obligation:</strong> Compliance with applicable laws and regulatory requirements.</li>
               <li><strong>Consent:</strong> Marketing communications and optional data uses, where we have obtained your explicit consent. You may withdraw consent at any time.</li>
             </ul>
@@ -184,7 +184,7 @@ const PrivacyPolicy = () => {
           <Section id="pp-7" title="7. Cookies and Tracking Technologies">
             <p>We use cookies and similar technologies on our website and within the Juniors console for the following purposes:</p>
             <ul>
-              <li><strong>Essential cookies:</strong> Required for the platform to function — session management, authentication tokens, and security features. These cannot be disabled without breaking core functionality.</li>
+              <li><strong>Essential cookies:</strong> Required for the platform to function,session management, authentication tokens, and security features. These cannot be disabled without breaking core functionality.</li>
               <li><strong>Analytics cookies:</strong> Anonymised tracking of page views, feature usage, and navigation flows to improve the product. We use privacy-respecting analytics tools that do not build individual advertising profiles.</li>
               <li><strong>Preference cookies:</strong> Storing your UI preferences (e.g., theme, language, dashboard layout) across sessions.</li>
             </ul>
