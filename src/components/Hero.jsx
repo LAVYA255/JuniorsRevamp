@@ -22,6 +22,7 @@ const Hero = () => {
 
   return (
     <section className="hero-section">
+      {/* Floating particle lines — temporarily commented out
       <div className="particles-container">
         {lines.map((line) => (
           <div
@@ -36,7 +37,7 @@ const Hero = () => {
             <motion.div
               className="particle-line"
               initial={{ x: line.distance, opacity: 0 }}
-              animate={{ 
+              animate={{
                 x: [line.distance, 100],
                 opacity: [0, 0.4, 0]
               }}
@@ -50,6 +51,7 @@ const Hero = () => {
           </div>
         ))}
       </div>
+      */}
 
       <motion.div 
         className="hero-content container text-center"
