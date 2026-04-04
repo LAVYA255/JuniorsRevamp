@@ -4,14 +4,44 @@
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 100;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  /* No JS transform — pure CSS so position:fixed never jitters on mobile */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   transform: none !important;
   animation: navbar-fadein 0.4s ease both;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar--dark {
+  background-color: rgba(12, 12, 12, 0.96);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.navbar--dark .navbar-links li a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar--dark .navbar-links li a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar--dark .navbar-logo {
+  filter: invert(1);
+}
+
+.navbar--dark .navbar-hamburger span {
+  background: #ffffff;
+}
+
+.navbar--dark .btn-primary {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.navbar--dark .btn-primary:hover {
+  background-color: #e8e8e8;
 }
 
 @keyframes navbar-fadein {

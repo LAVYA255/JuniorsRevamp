@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import './Navbar.css';
@@ -6,6 +6,24 @@ import './Navbar.css';
 const Navbar = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const checkDark = () => {
+      const navEl = document.querySelector('.navbar');
+      const navH = navEl ? navEl.offsetHeight : 76;
+      const darkSections = document.querySelectorAll('.section-dark');
+      let dark = false;
+      darkSections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= navH && rect.bottom >= 0) dark = true;
+      });
+      setIsDark(dark);
+    };
+    window.addEventListener('scroll', checkDark, { passive: true });
+    checkDark();
+    return () => window.removeEventListener('scroll', checkDark);
+  }, []);
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -21,7 +39,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar${isDark ? ' navbar--dark' : ''}`}>
         <div className="navbar-container">
           <div className="navbar-logo">
             <img src="/logo.png" alt="Juniors Logo" style={{ height: '72px' }} />

@@ -62,10 +62,10 @@
 }
 
 .card-number {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  opacity: 0.5;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  opacity: 1;
 }
 
 .card-icon {
