@@ -57,6 +57,12 @@
   transition: opacity 0.2s ease;
 }
 
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .footer-column a:hover {
   opacity: 0.7;
 }
