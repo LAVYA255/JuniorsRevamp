@@ -23,7 +23,7 @@
 }
 
 .why-header {
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -124,7 +124,7 @@
   }
 
   .why-header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.75rem;
   }
 
   /* Kill the moving grid on mobile — saves battery and fixes jank */
