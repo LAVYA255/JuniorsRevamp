@@ -22,7 +22,6 @@ const Hero = () => {
 
   return (
     <section className="hero-section">
-      {/* Floating particle lines — temporarily commented out
       <div className="particles-container">
         {lines.map((line) => (
           <div
@@ -51,7 +50,6 @@ const Hero = () => {
           </div>
         ))}
       </div>
-      */}
 
       <motion.div 
         className="hero-content container text-center"
@@ -95,7 +93,8 @@ const Hero = () => {
           </motion.button>
         </motion.div>
 
-        <motion.div 
+        {/* Scrolling company logos — temporarily commented out
+        <motion.div
           className="hero-logos-banner"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -120,6 +119,7 @@ const Hero = () => {
             </div>
           </div>
         </motion.div>
+        */}
       </motion.div>
     </section>
   );
