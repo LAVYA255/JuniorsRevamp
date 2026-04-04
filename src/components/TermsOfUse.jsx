@@ -46,11 +46,11 @@ const TermsOfUse = () => {
             <span className="badge">Legal</span>
             <h1 className="tou-title">Terms of Use</h1>
             <p className="tou-meta">
-              Juniors AI &mdash; a product of <strong>Highfox Private Limited</strong><br />
+              Juniors AI &mdash; a product of <strong>Herpenza Private Limited</strong><br />
               Last updated: <strong>July 25, 2025</strong>
             </p>
             <p className="tou-intro">
-              These Terms of Use ("<strong>Terms</strong>") constitute a legally binding agreement between you ("<strong>Customer</strong>", "<strong>you</strong>", or "<strong>your</strong>") and Highfox Private Limited, operating as Juniors AI ("<strong>Juniors</strong>", "<strong>we</strong>", "<strong>us</strong>", or "<strong>our</strong>"). By accessing or using the Juniors platform you agree to be bound by these Terms in full. If you do not agree, you must not use our services.
+              These Terms of Use ("<strong>Terms</strong>") constitute a legally binding agreement between you ("<strong>Customer</strong>", "<strong>you</strong>", or "<strong>your</strong>") and Herpenza Private Limited, operating as Juniors AI ("<strong>Juniors</strong>", "<strong>we</strong>", "<strong>us</strong>", or "<strong>our</strong>"). By accessing or using the Juniors platform you agree to be bound by these Terms in full. If you do not agree, you must not use our services.
             </p>
           </div>
 
@@ -58,11 +58,11 @@ const TermsOfUse = () => {
           <div className="tou-contact-card">
             <div className="tou-contact-row">
               <span className="tou-contact-label">Company</span>
-              <span>Highfox Private Limited</span>
+              <span>Herpenza Private Limited</span>
             </div>
             <div className="tou-contact-row">
               <span className="tou-contact-label">Email</span>
-              <a href="mailto:support@juniors.ai">support@juniors.ai</a>
+              <a href="mailto:rahul@juniors.ai">rahul@juniors.ai</a>
             </div>
             <div className="tou-contact-row">
               <span className="tou-contact-label">Website</span>
@@ -70,7 +70,7 @@ const TermsOfUse = () => {
             </div>
             <div className="tou-contact-row">
               <span className="tou-contact-label">Address</span>
-              <span>Bunglow No. 25, Shreesh Co-Operative Housing Society, Hajuri Darga Road, Thane, Maharashtra&nbsp;400604, India</span>
+              <span>19, Shankar Vihar Vistar, Charan Nadi 2, Murlipura, Jaipur – 302039, India</span>
             </div>
           </div>
 
@@ -114,7 +114,7 @@ const TermsOfUse = () => {
             <ul>
               <li>Provide accurate, current, and complete registration information and keep it up to date;</li>
               <li>Maintain the confidentiality of your login credentials and not share them with unauthorised parties;</li>
-              <li>Notify us immediately at <a href="mailto:support@juniors.ai">support@juniors.ai</a> upon discovery of any unauthorised access to your account;</li>
+              <li>Notify us immediately at <a href="mailto:rahul@juniors.ai">rahul@juniors.ai</a> upon discovery of any unauthorised access to your account;</li>
               <li>Accept responsibility for all activity that occurs under your account credentials.</li>
             </ul>
             <p>We reserve the right to suspend or terminate accounts where there is evidence of compromised credentials or policy violations.</p>
@@ -226,7 +226,7 @@ const TermsOfUse = () => {
           </Section>
 
           <Section id="tou-14" title="14. Intellectual Property">
-            <p><strong>Juniors' IP:</strong> The platform, its software, design, algorithms, and all associated intellectual property are owned by Highfox Private Limited and protected under applicable intellectual property laws. These Terms grant you a limited, non-exclusive, non-transferable licence to use the platform for your internal business purposes during the term of your subscription.</p>
+            <p><strong>Juniors' IP:</strong> The platform, its software, design, algorithms, and all associated intellectual property are owned by Herpenza Private Limited and protected under applicable intellectual property laws. These Terms grant you a limited, non-exclusive, non-transferable licence to use the platform for your internal business purposes during the term of your subscription.</p>
             <p><strong>Your IP:</strong> You retain full ownership of all content, data, and materials you bring to the platform, including your knowledge base, conversation histories, and brand assets.</p>
             <p><strong>Feedback:</strong> If you provide feedback, suggestions, or ideas regarding the platform, you grant Juniors a perpetual, royalty-free licence to use such feedback for product improvement without any obligation to you.</p>
           </Section>
@@ -265,7 +265,7 @@ const TermsOfUse = () => {
           </Section>
 
           <Section id="tou-18" title="18. Indemnification">
-            <p>You agree to indemnify, defend, and hold harmless Juniors, Highfox Private Limited, and their respective officers, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising from:</p>
+            <p>You agree to indemnify, defend, and hold harmless Juniors, Herpenza Private Limited, and their respective officers, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising from:</p>
             <ul>
               <li>Your use of the platform in violation of these Terms;</li>
               <li>Your violation of any applicable law or third-party right;</li>
@@ -276,7 +276,7 @@ const TermsOfUse = () => {
           </Section>
 
           <Section id="tou-19" title="19. Termination">
-            <p><strong>By you:</strong> You may terminate your account at any time by contacting <a href="mailto:support@juniors.ai">support@juniors.ai</a>. Termination is effective at the end of the current billing period. No pro-rated refunds are issued for the remaining period.</p>
+            <p><strong>By you:</strong> You may terminate your account at any time by contacting <a href="mailto:rahul@juniors.ai">rahul@juniors.ai</a>. Termination is effective at the end of the current billing period. No pro-rated refunds are issued for the remaining period.</p>
             <p><strong>By Juniors:</strong> We may suspend or terminate your access immediately and without prior notice if:</p>
             <ul>
               <li>You materially breach these Terms and fail to cure the breach within 7 days of written notice;</li>
@@ -318,7 +318,7 @@ const TermsOfUse = () => {
             <div className="tou-contact-card tou-contact-card--light">
               <div className="tou-contact-row">
                 <span className="tou-contact-label">Email</span>
-                <a href="mailto:support@juniors.ai">support@juniors.ai</a>
+                <a href="mailto:rahul@juniors.ai">rahul@juniors.ai</a>
               </div>
               <div className="tou-contact-row">
                 <span className="tou-contact-label">Website</span>
@@ -332,7 +332,7 @@ const TermsOfUse = () => {
           </Section>
 
           <div className="tou-footer">
-            <p>© 2026 Highfox Private Limited. All rights reserved.</p>
+            <p>© 2026 Herpenza Private Limited. All rights reserved.</p>
             <button className="btn-primary tou-back-btn" onClick={onClose}>Back to site</button>
           </div>
         </div>

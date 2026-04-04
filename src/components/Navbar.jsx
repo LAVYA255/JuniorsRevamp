@@ -49,6 +49,7 @@ const Navbar = () => {
           <ul className="navbar-links">
             <li><a href="#why">Why Juniors</a></li>
             <li><a href="#features">Features</a></li>
+            <li><a href="#comparison">Comparison</a></li>
             <li><a href="#pricing">Pricing</a></li>
           </ul>
 
@@ -97,9 +98,10 @@ const Navbar = () => {
               transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
             >
               <ul className="mobile-menu-links">
-                <li><a href="#why"      onClick={() => handleNav('#why')}>Why Juniors</a></li>
-                <li><a href="#features" onClick={() => handleNav('#features')}>Features</a></li>
-                <li><a href="#pricing"  onClick={() => handleNav('#pricing')}>Pricing</a></li>
+                <li><a href="#why"        onClick={() => handleNav('#why')}>Why Juniors</a></li>
+                <li><a href="#features"  onClick={() => handleNav('#features')}>Features</a></li>
+                <li><a href="#comparison" onClick={() => handleNav('#comparison')}>Comparison</a></li>
+                <li><a href="#pricing"   onClick={() => handleNav('#pricing')}>Pricing</a></li>
               </ul>
               <button
                 className="btn-primary mobile-menu-cta"

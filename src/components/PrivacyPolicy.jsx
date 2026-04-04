@@ -46,11 +46,11 @@ const PrivacyPolicy = () => {
             <span className="badge">Legal</span>
             <h1 className="pp-title">Privacy Policy</h1>
             <p className="pp-meta">
-              Juniors AI &mdash; a product of <strong>Highfox Private Limited</strong><br />
+              Juniors AI &mdash; a product of <strong>Herpenza Private Limited</strong><br />
               Last updated: <strong>July 25, 2025</strong>
             </p>
             <p className="pp-intro">
-              This Privacy Policy explains how Highfox Private Limited, operating as Juniors AI ("<strong>Juniors</strong>", "<strong>we</strong>", "<strong>us</strong>", or "<strong>our</strong>"), handles information in connection with the Juniors platform. Given our <strong>bring-your-own-infrastructure (BYOI)</strong> architecture, the scope of data we collect and process is intentionally minimal — your customer data stays on your infrastructure, not ours. This policy applies to account holders, team members, and visitors to our website.
+              This Privacy Policy explains how Herpenza Private Limited, operating as Juniors AI ("<strong>Juniors</strong>", "<strong>we</strong>", "<strong>us</strong>", or "<strong>our</strong>"), handles information in connection with the Juniors platform. Given our <strong>bring-your-own-infrastructure (BYOI)</strong> architecture, the scope of data we collect and process is intentionally minimal — your customer data stays on your infrastructure, not ours. This policy applies to account holders, team members, and visitors to our website.
             </p>
           </div>
 
@@ -58,11 +58,11 @@ const PrivacyPolicy = () => {
           <div className="pp-contact-card">
             <div className="pp-contact-row">
               <span className="pp-contact-label">Company</span>
-              <span>Highfox Private Limited</span>
+              <span>Herpenza Private Limited</span>
             </div>
             <div className="pp-contact-row">
               <span className="pp-contact-label">Email</span>
-              <a href="mailto:support@juniors.ai">support@juniors.ai</a>
+              <a href="mailto:rahul@juniors.ai">rahul@juniors.ai</a>
             </div>
             <div className="pp-contact-row">
               <span className="pp-contact-label">Website</span>
@@ -70,7 +70,7 @@ const PrivacyPolicy = () => {
             </div>
             <div className="pp-contact-row">
               <span className="pp-contact-label">Address</span>
-              <span>Bunglow No. 25, Shreesh Co-Operative Housing Society, Hajuri Darga Road, Thane, Maharashtra 400604, India</span>
+              <span>19, Shankar Vihar Vistar, Charan Nadi 2, Murlipura, Jaipur – 302039, India</span>
             </div>
           </div>
 
@@ -226,7 +226,7 @@ const PrivacyPolicy = () => {
               <li><strong>Objection:</strong> Object to processing based on legitimate interests.</li>
               <li><strong>Withdraw consent:</strong> Withdraw consent for any processing based on consent (e.g., marketing emails) at any time, without affecting the lawfulness of prior processing.</li>
             </ul>
-            <p>To exercise any of these rights, contact us at <a href="mailto:support@juniors.ai">support@juniors.ai</a>. We will respond within 30 days. We may need to verify your identity before processing your request.</p>
+            <p>To exercise any of these rights, contact us at <a href="mailto:rahul@juniors.ai">rahul@juniors.ai</a>. We will respond within 30 days. We may need to verify your identity before processing your request.</p>
             <p>If you are located in the EU/EEA and are not satisfied with our response, you have the right to lodge a complaint with your local supervisory authority.</p>
           </Section>
 
@@ -242,13 +242,13 @@ const PrivacyPolicy = () => {
           </Section>
 
           <Section id="pp-12" title="12. International Data Transfers">
-            <p>Highfox Private Limited is based in India. If you access Juniors from outside India, your account and usage data may be transferred to and processed in India.</p>
+            <p>Herpenza Private Limited is based in India. If you access Juniors from outside India, your account and usage data may be transferred to and processed in India.</p>
             <p>Where we engage service providers located in other jurisdictions, we ensure appropriate safeguards are in place, such as standard contractual clauses or equivalent mechanisms, to protect your data in accordance with applicable law.</p>
             <p>Because your operational support data (conversations, tickets, knowledge base) resides on your own infrastructure, international transfer rules for that data are governed by your own configuration and compliance obligations.</p>
           </Section>
 
           <Section id="pp-13" title="13. Children's Privacy">
-            <p>The Juniors platform is designed for business use and is not intended for individuals under the age of 18. We do not knowingly collect personal information from minors. If you believe a minor has provided us with personal information, please contact us at <a href="mailto:support@juniors.ai">support@juniors.ai</a> and we will delete it promptly.</p>
+            <p>The Juniors platform is designed for business use and is not intended for individuals under the age of 18. We do not knowingly collect personal information from minors. If you believe a minor has provided us with personal information, please contact us at <a href="mailto:rahul@juniors.ai">rahul@juniors.ai</a> and we will delete it promptly.</p>
           </Section>
 
           <Section id="pp-14" title="14. Third-Party Links">
@@ -270,7 +270,7 @@ const PrivacyPolicy = () => {
             <div className="pp-contact-card pp-contact-card--light">
               <div className="pp-contact-row">
                 <span className="pp-contact-label">Email</span>
-                <a href="mailto:support@juniors.ai">support@juniors.ai</a>
+                <a href="mailto:rahul@juniors.ai">rahul@juniors.ai</a>
               </div>
               <div className="pp-contact-row">
                 <span className="pp-contact-label">Website</span>
@@ -278,14 +278,14 @@ const PrivacyPolicy = () => {
               </div>
               <div className="pp-contact-row">
                 <span className="pp-contact-label">Address</span>
-                <span>Bunglow No. 25, Shreesh Co-Operative Housing Society, Hajuri Darga Road, Thane, Maharashtra 400604, India</span>
+                <span>19, Shankar Vihar Vistar, Charan Nadi 2, Murlipura, Jaipur – 302039, India</span>
               </div>
             </div>
             <p style={{ marginTop: '1rem' }}>We aim to respond to all privacy-related enquiries within <strong>30 days</strong>.</p>
           </Section>
 
           <div className="pp-footer">
-            <p>© 2026 Highfox Private Limited. All rights reserved.</p>
+            <p>© 2026 Herpenza Private Limited. All rights reserved.</p>
             <button className="btn-primary pp-back-btn" onClick={onClose}>Back to site</button>
           </div>
         </div>

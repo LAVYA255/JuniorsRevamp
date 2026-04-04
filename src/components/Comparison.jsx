@@ -13,7 +13,7 @@ const rows = [
 ];
 
 const Comparison = () => (
-  <section className="section comparison-section">
+  <section id="comparison" className="section comparison-section">
     <div className="container">
       <motion.div className="comparison-header text-center" {...fadeUp()}>
         <span className="badge">Comparison</span>
