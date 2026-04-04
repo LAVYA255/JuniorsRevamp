@@ -116,6 +116,13 @@
   margin-left: 2px;
 }
 
+.ea-optional {
+  color: var(--text-secondary);
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-left: 4px;
+}
+
 .ea-field input,
 .ea-field textarea {
   font-family: inherit;

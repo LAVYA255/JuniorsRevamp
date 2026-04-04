@@ -5,7 +5,7 @@ import './EarlyAccessPage.css';
 
 const EarlyAccessPage = () => {
   const navigate = useNavigate();
-  const [form, setForm] = useState({ name: '', email: '' });
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [apiError, setApiError] = useState('');
@@ -46,7 +46,7 @@ const EarlyAccessPage = () => {
           name: form.name,
           email: form.email,
           subject: 'Early Access Request',
-          message: 'Early access request submitted via juniorsai.com',
+          message: form.message.trim() || 'Early access request submitted via juniorsai.com',
           platform: 'JUNIORS',
         }),
       });
@@ -147,6 +147,20 @@ const EarlyAccessPage = () => {
                       autoComplete="email"
                     />
                     {errors.email && <span className="ea-error">{errors.email}</span>}
+                  </div>
+
+                  <div className="ea-field">
+                    <label htmlFor="ea-message">
+                      Message <span className="ea-optional">(optional)</span>
+                    </label>
+                    <textarea
+                      id="ea-message"
+                      name="message"
+                      placeholder="Anything you'd like us to know — your use case, team size, or questions."
+                      value={form.message}
+                      onChange={handleChange}
+                      rows={3}
+                    />
                   </div>
 
                   {apiError && (
