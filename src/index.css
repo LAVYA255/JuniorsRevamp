@@ -78,7 +78,7 @@ ul {
 /* Typography Utilities */
 .text-center { text-align: center; }
 .text-hero {
-  font-size: clamp(2rem, 3.6vw, 3.4rem);
+  font-size: clamp(2rem, 3.4vw, 3.1rem);
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.03em;

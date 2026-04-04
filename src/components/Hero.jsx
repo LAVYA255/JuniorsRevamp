@@ -69,7 +69,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
         >
-          Customer support that runs on your <br className="hidden-mobile" /> infrastructure, <span className="text-secondary" style={{ whiteSpace: 'nowrap' }}>not ours.</span>
+          Customer support that runs on your infrastructure, <span className="text-secondary" style={{ whiteSpace: 'nowrap' }}>not ours.</span>
         </motion.h1>
         
         <motion.p 
