@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { fadeUp } from '../utils/motion';
 import './CTA.css';
@@ -13,8 +12,6 @@ const lines = Array.from({ length: 30 }).map((_, i) => ({
 }));
 
 const CTA = () => {
-  const navigate = useNavigate();
-
   return (
     <section className="section cta-section">
       <div className="container">
@@ -44,17 +41,17 @@ const CTA = () => {
               Get access to the support console built for teams who refuse to hand over their data, their margins, or their flexibility.
             </p>
 
-            <motion.button
+            <motion.a
+              href="/early-access"
               className="btn-primary cta-btn"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate('/early-access')}
             >
               Get Access
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </div>

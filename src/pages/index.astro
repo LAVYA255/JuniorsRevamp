@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.jsx';
+import Hero from '../components/Hero.jsx';
+import StatsBand from '../components/StatsBand.jsx';
+import WhyJuniors from '../components/WhyJuniors.jsx';
+import Features from '../components/Features.jsx';
+import Comparison from '../components/Comparison.jsx';
+import Pricing from '../components/Pricing.jsx';
+import CTA from '../components/CTA.jsx';
+import Footer from '../components/Footer.jsx';
+---
+
+<BaseLayout>
+  <Navbar client:load />
+  <main>
+    <Hero client:load />
+    <StatsBand client:visible />
+    <WhyJuniors client:visible />
+    <Features client:visible />
+    <Comparison client:visible />
+    <Pricing client:visible />
+    <CTA client:load />
+  </main>
+  <Footer client:load />
+</BaseLayout>

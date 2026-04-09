@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
-  const navigate = useNavigate();
 
   return (
     <footer className="footer-section section-dark">
@@ -26,9 +24,7 @@ const Footer = () => {
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#features">Features</a></li>
                 <li>
-                  <button className="footer-ea-link" onClick={() => navigate('/early-access')}>
-                    Get Access
-                  </button>
+                  <a href="/early-access" className="footer-ea-link">Get Access</a>
                 </li>
               </ul>
             </div>
@@ -58,8 +54,8 @@ const Footer = () => {
             <div className="footer-column">
               <h4 className="footer-heading">Legal</h4>
               <ul>
-                <li><Link to="/privacy">Privacy policy</Link></li>
-                <li><Link to="/terms">Terms of use</Link></li>
+                <li><a href="/privacy">Privacy policy</a></li>
+                <li><a href="/terms">Terms of use</a></li>
               </ul>
             </div>
           </div>

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import './EarlyAccessPage.css';
 
 const EarlyAccessPage = () => {
-  const navigate = useNavigate();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -66,7 +64,7 @@ const EarlyAccessPage = () => {
       <div className="ea-topbar">
         <div className="ea-topbar-inner">
           <img src="/logo.png" alt="Juniors" style={{ height: '40px' }} />
-          <button className="ea-topbar-back" onClick={() => navigate('/')}>
+          <button className="ea-topbar-back" onClick={() => window.location.href = '/'}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M18 6L6 18M6 6l12 12"/>
             </svg>
@@ -101,7 +99,7 @@ const EarlyAccessPage = () => {
                 <p className="ea-success-text">
                   Thanks, <strong>{form.name.split(' ')[0]}</strong>. We've received your request and will be in touch at <strong>{form.email}</strong> soon.
                 </p>
-                <button className="btn-primary ea-back-btn" onClick={() => navigate('/')}>
+                <button className="btn-primary ea-back-btn" onClick={() => window.location.href = '/'}>
                   Back to site
                 </button>
               </motion.div>

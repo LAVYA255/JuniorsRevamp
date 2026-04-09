@@ -1,5 +1,4 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import './Hero.css';
 
@@ -12,7 +11,6 @@ const lines = Array.from({ length: 45 }).map((_, i) => {
 });
 
 const Hero = () => {
-  const navigate = useNavigate();
   const { scrollY } = useScroll();
 
   // Disable parallax/fade on mobile — keeps content visible on fast scroll
@@ -87,10 +85,10 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <motion.button className="btn-primary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => navigate('/early-access')}>
+          <motion.a href="/early-access" className="btn-primary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             Get Access
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         {/* Scrolling company logos — temporarily commented out
