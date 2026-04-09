@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import './Navbar.css';
 
 const Navbar = () => {
-  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
 
@@ -55,9 +53,9 @@ const Navbar = () => {
 
           <div className="navbar-right">
             <div className="navbar-cta">
-              <button className="btn-primary" onClick={() => navigate('/early-access')}>
+              <a href="/early-access" className="btn-primary">
                 Get Access
-              </button>
+              </a>
             </div>
 
             {/* Hamburger — mobile only */}
@@ -103,12 +101,13 @@ const Navbar = () => {
                 <li><a href="#comparison" onClick={() => handleNav('#comparison')}>Comparison</a></li>
                 <li><a href="#pricing"   onClick={() => handleNav('#pricing')}>Pricing</a></li>
               </ul>
-              <button
+              <a
+                href="/early-access"
                 className="btn-primary mobile-menu-cta"
-                onClick={() => { closeMenu(); navigate('/early-access'); }}
+                onClick={closeMenu}
               >
                 Get Access
-              </button>
+              </a>
             </motion.div>
           </>
         )}

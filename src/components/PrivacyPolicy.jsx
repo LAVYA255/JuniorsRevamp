@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './PrivacyPolicy.css';
 
@@ -11,8 +10,7 @@ const Section = ({ id, title, children }) => (
 );
 
 const PrivacyPolicy = () => {
-  const navigate = useNavigate();
-  const onClose = () => navigate('/');
+  const onClose = () => { window.location.href = '/'; };
 
   useEffect(() => {
     window.scrollTo(0, 0);
